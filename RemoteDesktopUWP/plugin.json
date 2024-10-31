@@ -1,0 +1,14 @@
+{
+    "ID": "1826ac5f67f74388b370f4182ac54dc7",
+    "ActionKeyword": "rd",
+    "Disabled": false,
+    "IsGlobal": false,
+    "Name": "RemoteDesktopUWP",
+    "Author": "",
+    "Version": "1.0.0",
+    "Language": "csharp",
+    "Website": "",
+    "ExecuteFileName": "Community.PowerToys.Run.Plugin.RemoteDesktopUWP.dll",
+    "IcoPathDark": "Images\\RemoteDesktopUWP.dark.png",
+    "IcoPathLight": "Images\\RemoteDesktopUWP.light.png"
+}
