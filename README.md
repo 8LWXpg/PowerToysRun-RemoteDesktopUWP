@@ -29,6 +29,13 @@ ptr add RemoteDesktopUWP 8LWXpg/PowerToysRun-RemoteDesktopUWP
 1. Open PowerToys Run (default shortcut is <kbd>Alt+Space</kbd>).
 2. Type `rd`.
 
+### Add a connection
+
+1. Open the Remote Desktop UWP app.
+2. Create a new connection.
+3. Open the connection.
+4. Open PowerToys Run and type `rd`.
+
 ## Building
 
 1. Clone the repository and the dependencies in `/lib` with `RemoteDesktopUWP/copyLib.ps1`.
