@@ -1,45 +1,44 @@
-using System.Diagnostics;
 using System.IO;
 
 namespace Community.PowerToys.Run.Plugin.RemoteDesktopUWP.Helpers;
 
 public static class ConnectionsProvider
 {
-	private static readonly string _connectionsPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Packages\\Microsoft.RemoteDesktop_8wekyb3d8bbwe\\LocalState\\RemoteDesktopData\\JumpListConnectionArgs";
-	private static readonly FileSystemWatcher _watcher;
-	private static readonly object _lock = new();
-	private static List<Connection>? _cachedConnections;
+	private static readonly string ConnectionsPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Packages\\Microsoft.RemoteDesktop_8wekyb3d8bbwe\\LocalState\\RemoteDesktopData\\JumpListConnectionArgs";
+	private static readonly FileSystemWatcher Watcher;
+	private static readonly object Lock = new();
+	private static List<Connection>? CachedConnections;
 	public static List<Connection> Connections
 	{
 		get
 		{
-			lock (_lock)
+			lock (Lock)
 			{
-				_cachedConnections ??= Directory.GetFiles(_connectionsPath, "*.model").Select(Connection.Parse).ToList();
-				return _cachedConnections;
+				CachedConnections ??= Directory.GetFiles(ConnectionsPath, "*.model").Select(Connection.Parse).ToList();
+				return CachedConnections;
 			}
 		}
 	}
 
 	static ConnectionsProvider()
 	{
-		_watcher = new()
+		Watcher = new()
 		{
-			Path = _connectionsPath,
+			Path = ConnectionsPath,
 			Filter = "*.model",
 		};
 
 		static void update(object _, FileSystemEventArgs e)
 		{
-			lock (_lock)
+			lock (Lock)
 			{
-				_cachedConnections = null;
+				CachedConnections = null;
 			}
 		}
 
-		_watcher.Changed += update;
-		_watcher.Created += update;
-		_watcher.Deleted += update;
-		_watcher.EnableRaisingEvents = true;
+		Watcher.Changed += update;
+		Watcher.Created += update;
+		Watcher.Deleted += update;
+		Watcher.EnableRaisingEvents = true;
 	}
 }
