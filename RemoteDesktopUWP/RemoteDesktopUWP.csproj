@@ -10,8 +10,8 @@
         <Platforms>x64;ARM64</Platforms>
         <Title>PowerToys Run RemoteDesktopUWP</Title>
         <Product>PowerToys Run RemoteDesktopUWP Plugin</Product>
-        <Authors></Authors>
-        <RepositoryUrl></RepositoryUrl>
+        <Authors>8LWXpg</Authors>
+        <RepositoryUrl>https://github.com/8LWXpg/PowerToysRun-RemoteDesktopUWP</RepositoryUrl>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)'=='Debug'">
