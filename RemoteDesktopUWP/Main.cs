@@ -1,6 +1,5 @@
 using Community.PowerToys.Run.Plugin.RemoteDesktopUWP.Helpers;
 using ManagedCommon;
-using Microsoft.PowerToys.Settings.UI.Library;
 using System.Windows.Controls;
 using Wox.Infrastructure;
 using Wox.Plugin;
@@ -17,6 +16,8 @@ public class Main : IPlugin, IPluginI18n, IReloadable, IDisposable
 
 	public List<Result> Query(Query query)
 	{
+		ArgumentNullException.ThrowIfNull(query);
+
 		var results = ConnectionsProvider.Connections.Select((c) =>
 		{
 			MatchResult match = StringMatcher.FuzzySearch(query.Search, c.DisplayName);
@@ -33,7 +34,7 @@ public class Main : IPlugin, IPluginI18n, IReloadable, IDisposable
 
 		if (!string.IsNullOrEmpty(query.Search))
 		{
-			results.RemoveAll(x => x.Score <= 0);
+			_ = results.RemoveAll(x => x.Score <= 0);
 		}
 
 		return results;
