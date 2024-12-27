@@ -1,14 +1,14 @@
 {
-    "ID": "1826ac5f67f74388b370f4182ac54dc7",
-    "ActionKeyword": "rd",
-    "Disabled": false,
-    "IsGlobal": false,
-    "Name": "RemoteDesktopUWP",
-    "Author": "8LWXpg",
-    "Version": "1.0.0",
-    "Language": "csharp",
-    "Website": "https://github.com/8LWXpg/PowerToysRun-RemoteDesktopUWP",
-    "ExecuteFileName": "Community.PowerToys.Run.Plugin.RemoteDesktopUWP.dll",
-    "IcoPathDark": "Images\\RemoteDesktopUWP.dark.png",
-    "IcoPathLight": "Images\\RemoteDesktopUWP.light.png"
+	"ID": "1826ac5f67f74388b370f4182ac54dc7",
+	"ActionKeyword": "rd",
+	"Disabled": false,
+	"IsGlobal": false,
+	"Name": "RemoteDesktopUWP",
+	"Author": "8LWXpg",
+	"Version": "1.1.0",
+	"Language": "csharp",
+	"Website": "https://github.com/8LWXpg/PowerToysRun-RemoteDesktopUWP",
+	"ExecuteFileName": "Community.PowerToys.Run.Plugin.RemoteDesktopUWP.dll",
+	"IcoPathDark": "Images\\RemoteDesktopUWP.dark.png",
+	"IcoPathLight": "Images\\RemoteDesktopUWP.light.png"
 }
