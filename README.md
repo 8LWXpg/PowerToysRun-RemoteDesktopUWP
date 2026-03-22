@@ -4,6 +4,9 @@ A [PowerToys Run](https://aka.ms/PowerToysOverview_PowerToysRun) plugin for open
 
 Checkout the [Template](https://github.com/8LWXpg/PowerToysRun-PluginTemplate) for a starting point to create your own plugin.
 
+> [!CAUTION]
+> The [Microsoft Remote Desktop](https://www.microsoft.com/store/productId/9WZDNCRFJ3PS) is no longer updated by Microsoft: [Blog](https://www.microsoft.com/en-us/d/microsoft-remote-desktop/9wzdncrfj3ps)
+
 ## Features
 
 ### Open Remote Desktop connection
